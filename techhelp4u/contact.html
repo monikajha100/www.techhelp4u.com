@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECHhelp4U | Meet Our Team</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Lottie (if needed) -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Your Stylesheet -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- Background blobs -->
+  <div class="blob top-blob"></div>
+  <div class="blob mid-blob"></div>
+  <div class="blob bottom-blob"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <img class="img" src="TECHhelp4U-.png" alt="TECHhelp4U Logo">
+    <div class="logo">TECHhelp4U</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="event.html">Explore</a>
+      <a href="team.html">Teams</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="#">Sign In / Login</a>
+    </nav>
+  </header>
+<section class="contact-section">
+  <div class="contact-container animate-on-scroll">
+
+    <!-- Left Side: Heading -->
+    <div class="contact-image animate-on-scroll">
+      <h2>Contact <span>TECHhelp4U</span></h2>
+        <p>Your ideas, queries, and feedback are always welcome!</p>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form-container animate-on-scroll">
+    
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Contact Number" required pattern="[0-9]{10}" />
+        <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</section><footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo Column on Left -->
+    <div class="footer-col footer-logo-col">
+      <img src="TECHhelp4U-.png" alt="TECHhelp4U Logo" class="footer-logo" />
+      <h2>TECHhelp4U</h2>
+      <p>Your gateway to tech excellence and community learning.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Social -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <p>Stay connected with us for updates and more:</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-col">
+  <h4>Contact Info</h4>
+  <ul class="contact-info">
+    <li><i class="fas fa-envelope"></i> info@techhelp4u.com</li>
+    <li><i class="fas fa-map-marker-alt"></i> Noida Sector 62, Uttar Pradesh, India</li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <strong>TECHhelp4U</strong>. All rights reserved.</p>
+  </div>
+</footer>
+</body></html>
